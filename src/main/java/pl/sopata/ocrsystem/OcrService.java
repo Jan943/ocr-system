@@ -16,7 +16,7 @@ public class OcrService {
             URL imageFile = new URL(url);
             BufferedImage bufferedImage = ImageIO.read(imageFile);
             ITesseract instance = new Tesseract();
-            instance.setDatapath("C:\\Users\\Janek cyganek\\Downloads");
+            instance.setDatapath("C:\\Users\\Janek\\Downloads");
             instance.setLanguage("pol");
             return instance.doOCR(bufferedImage);
         } catch (Exception e) {
