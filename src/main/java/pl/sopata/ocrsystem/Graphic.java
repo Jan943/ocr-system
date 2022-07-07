@@ -1,9 +1,25 @@
 package pl.sopata.ocrsystem;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Graphic {
 
+    @GeneratedValue
+    @Id
+    private Long id;
     private String url;
     private String content;
+
+    public Graphic() {
+    }
+
+    public Graphic(String url, String content) {
+        this.url = url;
+        this.content = content;
+    }
 
     public String getUrl() {
         return url;
